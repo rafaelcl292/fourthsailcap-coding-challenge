@@ -11,6 +11,7 @@ def create_table():
 
 
 def insert_data(ticker, date, currency_data):
+    print('Inserting data for {} on {}'.format(ticker, date))
     conn, cursor = create_table()
     cursor.execute(
         'INSERT INTO currency_data '
