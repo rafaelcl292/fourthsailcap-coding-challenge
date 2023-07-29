@@ -11,6 +11,8 @@ def create_table():
 
 
 def insert_data(ticker, date, currency_data):
+    if not currency_data.filled:
+        return
     print('Inserting data for {} on {}'.format(ticker, date))
     conn, cursor = create_table()
     cursor.execute(
@@ -30,5 +32,4 @@ def insert_data(ticker, date, currency_data):
     cursor.close()
     conn.commit()
     conn.close()
-
 
