@@ -12,7 +12,7 @@ COPY scraper.py .
 COPY parser.py .
 COPY database.py .
 COPY create_table.sql .
-COPY database.db[t] .
+COPY database.db database.db[t] .
 
 RUN chmod 0644 /etc/cron.d/crontab
 RUN /usr/bin/crontab /etc/cron.d/crontab
