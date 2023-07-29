@@ -35,12 +35,13 @@ class CurrencyData:
 
 
 class CurrencyParser(HTMLParser):
-    def __init__(self):
+    def __init__(self, target=None):
         super().__init__()
-        current_month = strftime('%b')
-        current_day = strftime('%d')
-        current_year = strftime('%Y')
-        target = f"{current_month} {current_day}, {current_year}"
+        if not target:
+            current_month = strftime('%b')
+            current_day = strftime('%d')
+            current_year = strftime('%Y')
+            target = f"{current_month} {current_day}, {current_year}"
         self.target = target
         self.target_found = False
         self.currency_data = CurrencyData()
