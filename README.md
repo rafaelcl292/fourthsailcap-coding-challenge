@@ -1,4 +1,4 @@
-# fourthsailcap-coding-challenge
+# scraper-coding-challenge
 
 Python application that scrapes daily currency prices from Yahoo Finance and stores it into a SQLite database.
 
